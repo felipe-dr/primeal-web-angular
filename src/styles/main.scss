@@ -1,0 +1,126 @@
+//
+// ----------------------------------------------------------------------
+// Título: Main
+// Origem: styles/main.scss
+// Autor: FDR
+//
+// Finalidade:
+// Arquivo principal que importa todos os 'partials'
+//
+// Arquitetura:
+// 7-1 pattern / Smacss
+// 1. Abstracts....Recursos gerais de configuração do scss
+//                 ex 1: variables, functions, mixins, placeholders
+//
+// 2. Vendors......Bibliotecas e frameworks de terceiros
+//                 ex 1: normalize, bootstrap, etc
+//
+// 3. Base.........Estilos padrão de elementos html
+//                 ex 1: reset, typography, animations
+//
+// 4. Layout.......Partes macro para compor a estrutura global
+//                 ex 1: grid, l-header, l-footer, l-navigation, 
+//                 l-sidebar, l-forms, etc
+//
+// 5. Components...Partes micro para compor módulos
+//                 ex 1: c-button, c-carousel, etc
+//
+// 6. State........Estilos que alteram o estado de um elemento e que
+//                 geralmente possuem vínculo com js 
+//                 ex 1: is-hidden, is-error, etc
+//
+// X. Pages........No 7-1 pattern pode-se separar estilos da página
+//                 ex 1: home, contact, about, etc
+//
+// 7. Themes.......Redefinição de estilos por temas específicos
+//                 ex 1: t-admin, t-christmas, t-theme, etc
+//
+// Metodologia:
+// Bem
+// 1. Block.........Entidade independente com seu próprio significado,
+//                  é a abstração mais geral de um componente
+//                  ex 1: c-search
+//
+// 2. Elemento......Descendente e parte de um bloco, ajudando a formá-lo
+//                  como um todo
+//                  ex 1: c-search__input
+//
+// 3. Modificador...Modifica um bloco ou elemento
+//                  ex 1: c-search--big, c-search__input--red
+//
+// Convenções:
+// Css namespaces
+// 1. (o-) Objeto..................Objetos são abstratos e devem ser
+//                                 analisados com cuidado
+//                                 ex 1: o-media
+//
+// 2. (c-) Componente..............Indica que é um elemento de UI
+//                                 ex 1: c-button, c-testimonial
+//
+// 3. (u-) Utilitário..............Estilo de responsabilidade única
+//                                 ex 1: u-text-center, u-bold
+//
+// 4. (t-) Tema....................Altera o estilo padrão do elemento
+//                                 ex 1: t-light, t-easter
+//
+// 5. (s-) Escopo..................Estiliza partes de um CMS
+//                                 ex 1: s-cms-content
+//
+// 6. (is-/has-) Estado/Condição...Estiliza elementos a partir de um 
+//                                 estado atual
+//                                 ex 1: is-open, is-loading
+//
+// 7. (js-) JavaScript.............Indica que há interação com JS e é
+//                                 independente da classe de estilo
+//                                 ex 1: js-modal, jsPlayer
+//
+// 8. (_) Hack.....................Indica que é um trecho temporário
+//                                 e que precisa de ser ajustado
+//                                 ex 1: _c-mobile
+//
+// 9. (qa-) QA.....................Indica que se trata de classe para
+//                                 testes do QA
+//                                 ex 1: qa-error-login
+// ----------------------------------------------------------------------
+//
+@charset 'utf-8';
+
+//
+// 1_Abstracts
+// ----------------------------------------------------------------------
+//
+// @import '1_abstracts/variables';
+@import '1_abstracts/functions';
+// @import '1_abstracts/mixins';
+// @import '1_abstracts/utilities';
+
+//
+// 2_Vendors
+// ----------------------------------------------------------------------
+//
+@import '2_vendors/bootstrap/config';
+
+//
+// 3_Base
+// ----------------------------------------------------------------------
+//
+
+//
+// 4_Layout
+// ----------------------------------------------------------------------
+//
+
+//
+// 5_Components
+// ----------------------------------------------------------------------
+//
+
+//
+// 6_State
+// ----------------------------------------------------------------------
+//
+
+//
+// 7_Themes
+// ----------------------------------------------------------------------
+//

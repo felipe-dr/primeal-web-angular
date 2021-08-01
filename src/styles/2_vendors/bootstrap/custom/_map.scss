@@ -1,0 +1,14 @@
+//
+// ----------------------------------------------------------------------
+// Título: Map
+// Origem: styles/2_vendors/bootstrap/custom/_map.scss
+//
+// Finalidade:
+// Na versão 5 do bootstrap é recomendado adicionar 'map' com o comando
+// 'map-merge' e para que seja possível utilizá-lo, embora as 'variables'
+// são '!default', esse comando só irá funcionar se caso o 'map' já
+// for definido previamente, ou seja, logo após a importação de 
+// 'variables.scss'
+// ----------------------------------------------------------------------
+//
+$theme-colors: map-merge($theme-colors, $custom-colors);

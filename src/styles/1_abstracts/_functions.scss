@@ -1,0 +1,57 @@
+//
+// ----------------------------------------------------------------------
+// Título: Functions
+// Origem: styles/1_abstracts/_functions.scss
+//
+// Finalidade:
+// Funções auxiliares que retornam um valor
+// ----------------------------------------------------------------------
+//
+
+//
+// Base
+// ----------------------------------------------------------------------
+//
+@function get-base-value($base) {
+  @return $base / ($base * 0 + 1);
+}
+
+//
+// Conversão de unidades
+// ----------------------------------------------------------------------
+//
+
+// De 'px' para 'rem'
+@function convert-px-rem($px) {
+  $base-size: get-base-value($base / 100);
+  $base-px-size: 16 * $base-size;
+  $font-size: (get-base-value($px) / $base-px-size) * 1rem;
+
+  @return $font-size;
+}
+
+//
+// Conversão de cores
+// ----------------------------------------------------------------------
+//
+
+// De 'hexadecimal' para 'rgba'
+@function convert-hexa-rgba($color, $opacity: 1) {
+  @return rgba($color, $opacity);
+}
+
+//
+// Z-index
+// ----------------------------------------------------------------------
+//
+
+// Atribui o nível de z-index com base na lista definida em variáveis
+@function zindex($name) {
+  @if index($Z-INDEXES, $name) {
+    @return (length($Z-INDEXES) - index($Z-INDEXES, $name)) + 1;
+  } @else {
+    @warn 'Não há nenhum item "#{$name}" nesta lista, escolha um de: #{$Z-INDEXES}';
+
+    @return null;
+  }
+}
