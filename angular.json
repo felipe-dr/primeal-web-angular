@@ -116,8 +116,5 @@
       }
     }
   },
-  "defaultProject": "primeal-web-angular",
-  "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
-  }
+  "defaultProject": "primeal-web-angular"
 }
