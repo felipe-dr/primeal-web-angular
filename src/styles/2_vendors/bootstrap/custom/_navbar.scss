@@ -1,0 +1,67 @@
+//
+// ----------------------------------------------------------------------
+// Título: Navbar
+// Origem: styles/2_vendors/bootstrap/custom/_navbar.scss
+//
+// Finalidade:
+// Sobrescrita da configuração da 'navbar'
+// ----------------------------------------------------------------------
+//
+.c-navbar {
+
+  //
+  // C-navbar__nav
+  // ----------------------------------------------------------------------
+  //
+  &__nav {
+
+    // C-navbar__nav nav-link
+    .nav-link {
+      color: convert-hexa-rgba($secondary, 0.8);
+
+      // C-navbar__nav nav-link:focus
+      // C-navbar__nav nav-link:hover
+      &:focus,
+      &:hover {
+        color: $secondary;
+      }
+
+      // C-navbar__nav nav-link active
+      &.active {
+        background-color: convert-hexa-rgba($dark, 0.15);
+        color: $secondary;
+      }
+    }
+  }
+}
+
+// Navbar-brand
+.navbar-brand {
+  @include font-size(25px);
+  @include margin-right(30px);
+  font-family: $font-family-title;
+  // Manter o padding-y equivalente a tamanho da 'navbar'
+  line-height: rfs-value(22px);
+}
+
+// Navbar-nav
+.navbar-nav {
+  @include font-size(15px);
+}
+
+// Nav-link
+.nav-link {
+  @include media-breakpoint-up(lg) {
+    @include padding-top(16px);
+    @include padding-bottom(16px);
+  }
+}
+
+// Navbar-collapse
+.navbar-collapse {
+  border-top: rfs-value(1px) solid convert-hexa-rgba($secondary, 0.17);
+
+  @include media-breakpoint-up(lg) {
+    border-top: 0;
+  }
+}
