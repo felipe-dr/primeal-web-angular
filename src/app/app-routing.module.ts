@@ -6,8 +6,9 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
 const routes: Routes = [
   {
     path: '',
-    component: ContentLayoutComponent
-  }
+    component: ContentLayoutComponent,
+    loadChildren: () => import('@features/home/home.module').then(m => m.HomeModule)
+  },
 ];
 
 @NgModule({
