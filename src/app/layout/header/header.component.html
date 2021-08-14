@@ -1,7 +1,7 @@
 <header class="bg-primary border-bottom border-base-1 border-2">
   <nav class="navbar navbar-expand-lg py-0">
-    <div class="container">
-      <a class="navbar-brand link-secondary py-3" [routerLink]="'home'">Primeal</a>
+    <div class="container-fluid container-lg">
+      <a class="navbar-brand link-secondary py-3" (click)="isMenuCollapsed = true" [routerLink]="['/home']">Primeal</a>
 
       <div class="d-flex order-lg-last">
         <ul class="navbar-nav">
@@ -23,10 +23,10 @@
       <div class="navbar-collapse collapse d-lg-flex justify-content-lg-between" [ngbCollapse]="isMenuCollapsed">
         <ul class="c-navbar__nav navbar-nav py-2 py-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)="isMenuCollapsed = true">Restaurantes</a>
+            <a class="nav-link" href="#" (click)="isMenuCollapsed = true" routerLinkActive="active">Restaurantes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" (click)="isMenuCollapsed = true">Sobre</a>
+            <a class="nav-link" (click)="isMenuCollapsed = true" [routerLink]="['/about']" routerLinkActive="active">Sobre</a>
           </li>
         </ul>
       </div>
