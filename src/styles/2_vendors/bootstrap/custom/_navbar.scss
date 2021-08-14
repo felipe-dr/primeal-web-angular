@@ -47,21 +47,27 @@
 // Navbar-nav
 .navbar-nav {
   @include font-size(15px);
-}
 
-// Nav-link
-.nav-link {
-  @include media-breakpoint-up(lg) {
-    @include padding-top(16px);
-    @include padding-bottom(16px);
+  // Nav-link
+  .nav-link {
+    @include padding-right(12px);
+    @include padding-left(12px);
+
+    @include media-breakpoint-up(lg) {
+      @include padding-top(16px);
+      @include padding-bottom(16px);
+    }
   }
 }
 
 // Navbar-collapse
 .navbar-collapse {
+  @include margin-left(-12px);
+  @include margin-right(-12px);
   border-top: rfs-value(1px) solid convert-hexa-rgba($secondary, 0.17);
 
   @include media-breakpoint-up(lg) {
+    margin: 0;
     border-top: 0;
   }
 }

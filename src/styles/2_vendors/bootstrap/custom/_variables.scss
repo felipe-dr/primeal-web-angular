@@ -44,9 +44,7 @@ $custom-font-sizes: (
   7: $h7-font-size,
 );
 
-.h1, h1,
-.h2, h2,
-.h3, h3 {
+.h1, h1 {
   font-family: $font-family-title;
   letter-spacing: 0.15rem;
 }
