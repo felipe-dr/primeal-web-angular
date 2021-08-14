@@ -6,8 +6,22 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: ContentLayoutComponent,
-    loadChildren: () => import('@features/home/home.module').then(m => m.HomeModule)
+    children: [
+      {
+        path: 'home',
+        loadChildren: () => import('@features/home/home.module').then(m => m.HomeModule),
+      },
+      {
+        path: 'about',
+        loadChildren: () => import('@features/about/about.module').then(m => m.AboutModule)
+      }
+    ]
   },
 ];
 
