@@ -1,0 +1,23 @@
+<p class="text-center mt-3">Autenticar</p>
+
+<form class="row gy-3 my-4" novalidate>
+  <div class="input-group">
+    <input class="form-control" type="text" placeholder="E-mail">
+    <span class="input-group-text">
+      <i class="bi-envelope-fill"></i>
+    </span>
+  </div>
+  <div class="input-group">
+    <input class="form-control" type="password" placeholder="Senha">
+    <span class="input-group-text">
+      <i class="bi-lock-fill"></i>
+    </span>
+  </div>
+  <div class="col-12 col-sm-auto">
+    <button class="btn btn-primary w-100" type="submit">Entrar</button>
+  </div>
+</form>
+
+<div class="text-center">
+  <a [routerLink]="['/auth/register']">Criar nova conta</a>
+</div>

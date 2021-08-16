@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
+import { ContentLayoutComponent } from '@layout/content-layout/content-layout.component';
 
 const routes: Routes = [
   {
@@ -20,9 +20,13 @@ const routes: Routes = [
       {
         path: 'about',
         loadChildren: () => import('@features/about/about.module').then(m => m.AboutModule)
+      },
+      {
+        path: 'auth',
+        loadChildren: () => import('@features/auth/auth.module').then(m => m.AuthModule),
       }
     ]
-  },
+  }
 ];
 
 @NgModule({
