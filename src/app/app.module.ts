@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from '@core/core.module';
-import { SharedModule } from '@shared/shared.module';
+import { NgbModule } from '@shared/modules/ngb.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '@layout/header/header.component';
@@ -21,7 +21,7 @@ import { ContentLayoutComponent } from '@layout/content-layout/content-layout.co
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    SharedModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
