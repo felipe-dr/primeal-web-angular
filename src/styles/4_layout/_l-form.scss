@@ -1,0 +1,20 @@
+//
+// ----------------------------------------------------------------------
+// Título: Form
+// Origem: sass/4_layout/_l-form.scss
+//
+// Finalidade:
+// Parte macro que definie a configuração do 'form'
+// ----------------------------------------------------------------------
+//
+.l-form {
+
+  // L-form--mw
+  &--mw {
+
+    // L-form--mw-small
+    &-small {
+      max-width: rfs-value(520px);
+    }
+  }
+}
