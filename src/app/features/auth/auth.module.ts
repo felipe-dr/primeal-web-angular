@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 
+import { SharedModule } from '@shared/shared.module';
 import { AuthRoutingModule } from './auth-routing.module';
 
 import { AuthLayoutComponent } from '@layout/auth-layout/auth-layout.component';
@@ -13,6 +14,7 @@ import { RegisterComponent } from './components/register/register.component';
     RegisterComponent
   ],
   imports: [
+    SharedModule,
     AuthRoutingModule
   ]
 })

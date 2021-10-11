@@ -1,21 +1,40 @@
 <p class="text-center mt-3">Criar nova conta</p>
 
-<form class="row gy-3 my-4" novalidate>
-  <div class="input-group">
-    <input class="form-control" id="userName" name="userName" type="text" placeholder="Nome">
+<form class="row gy-3 my-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="col-12">
+    <pm-input-container label="Nome" [control]="convertToFormControl(form.get('name'))" [ngClass]="addClassFeedback(form.get('name'))">
+      <input class="form-control" id="registerName" type="text" placeholder="Nome" formControlName="name" [autofocus]>
+    </pm-input-container>
   </div>
-  <div class="input-group">
-    <input class="form-control" id="userEmail" name="userEmail" type="text" placeholder="E-mail">
+
+  <div class="col-12">
+    <pm-input-container label="E-mail" [control]="convertToFormControl(form.get('email'))" [ngClass]="addClassFeedback(form.get('email'))">
+      <input class="form-control" id="registerEmail" type="text" placeholder="E-mail" formControlName="email">
+    </pm-input-container>
   </div>
-  <div class="input-group">
-    <input class="form-control" id="userPassword" name="userPassword" type="password" placeholder="Senha">
+
+  <div formGroupName="auth">
+    <div class="row gy-3">
+      <div class="col-12">
+        <pm-input-container label="Senha" [control]="convertToFormControl(form.get('auth.password'))"
+          [ngClass]="addClassFeedback(form.get('auth.password'))">
+          <input class="form-control" id="registerPassword" type="password" placeholder="Senha"
+            formControlName="password">
+        </pm-input-container>
+      </div>
+
+      <div class="col-12">
+        <pm-input-container label="Confirmar Senha" [control]="convertToFormControl(form.get('auth.confirmPassword'))"
+          [ngClass]="addClassFeedback(form.get('auth.confirmPassword'))">
+          <input class="form-control" id="registerConfirmPassword" type="password" placeholder="Confirmar Senha"
+            formControlName="confirmPassword">
+        </pm-input-container>
+      </div>
+    </div>
   </div>
-  <div class="input-group">
-    <input class="form-control" id="userConfirmPassword" name="userConfirmPassword" type="password"
-      placeholder="Confirmar senha">
-  </div>
+
   <div class="col-12 col-sm-auto">
-    <button class="btn btn-primary w-100" type="submit">Registrar</button>
+    <button class="btn btn-primary w-100" type="submit" [disabled]="form.invalid">Registrar</button>
   </div>
 </form>
 
