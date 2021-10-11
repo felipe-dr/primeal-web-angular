@@ -19,14 +19,14 @@
 //                 ex 1: reset, typography, animations
 //
 // 4. Layout.......Partes macro para compor a estrutura global
-//                 ex 1: grid, l-header, l-footer, l-navigation, 
+//                 ex 1: grid, l-header, l-footer, l-navigation,
 //                 l-sidebar, l-forms, etc
 //
 // 5. Components...Partes micro para compor módulos
 //                 ex 1: c-button, c-carousel, etc
 //
 // 6. State........Estilos que alteram o estado de um elemento e que
-//                 geralmente possuem vínculo com js 
+//                 geralmente possuem vínculo com js
 //                 ex 1: is-hidden, is-error, etc
 //
 // X. Pages........No 7-1 pattern pode-se separar estilos da página
@@ -66,7 +66,7 @@
 // 5. (s-) Escopo..................Estiliza partes de um CMS
 //                                 ex 1: s-cms-content
 //
-// 6. (is-/has-) Estado/Condição...Estiliza elementos a partir de um 
+// 6. (is-/has-) Estado/Condição...Estiliza elementos a partir de um
 //                                 estado atual
 //                                 ex 1: is-open, is-loading
 //
@@ -110,6 +110,7 @@
 // 4_Layout
 // ----------------------------------------------------------------------
 //
+@import '4_layout/l-form';
 
 //
 // 5_Components
@@ -120,6 +121,7 @@
 // 6_State
 // ----------------------------------------------------------------------
 //
+@import '6_state/is-element';
 
 //
 // 7_Themes
