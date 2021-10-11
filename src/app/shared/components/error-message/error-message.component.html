@@ -1,0 +1,6 @@
+<!--
+  Utilizada a classe 'd-block' devido ao 'invalid-feedback' ser 'display: none' e por estar dentro de um 'wrapper = pm-error-message', o seletor configurado do bootstrap não irá localizá-lo'
+-->
+<span class="invalid-feedback d-block" *ngIf="errorMessage !== null">
+  {{ errorMessage }}
+</span>
