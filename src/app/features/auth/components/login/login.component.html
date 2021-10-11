@@ -1,20 +1,28 @@
 <p class="text-center mt-3">Autenticar</p>
 
-<form class="row gy-3 my-4" novalidate>
-  <div class="input-group">
-    <input class="form-control" type="text" placeholder="E-mail">
-    <span class="input-group-text">
-      <i class="bi-envelope-fill"></i>
-    </span>
+<form class="row gy-3 my-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="col-12">
+    <pm-input-container class="input-group" label="E-mail" [control]="convertToFormControl(form.get('email'))"
+      [ngClass]="addClassFeedback(form.get('email'))">
+      <input class="form-control" id="loginEmail" type="text" placeholder="E-mail" formControlName="email" [autofocus]>
+      <span class="input-group-text">
+        <i class="bi-envelope-fill"></i>
+      </span>
+    </pm-input-container>
   </div>
-  <div class="input-group">
-    <input class="form-control" type="password" placeholder="Senha">
-    <span class="input-group-text">
-      <i class="bi-lock-fill"></i>
-    </span>
+
+  <div class="col-12">
+    <pm-input-container class="input-group" label="Senha" [control]="convertToFormControl(form.get('password'))"
+      [ngClass]="addClassFeedback(form.get('password'))">
+      <input class="form-control" id="loginPassword" type="password" placeholder="Senha" formControlName="password">
+      <span class="input-group-text">
+        <i class="bi-lock-fill"></i>
+      </span>
+    </pm-input-container>
   </div>
+
   <div class="col-12 col-sm-auto">
-    <button class="btn btn-primary w-100" type="submit">Entrar</button>
+    <button class="btn btn-primary w-100" type="submit" [disabled]="form.invalid">Entrar</button>
   </div>
 </form>
 

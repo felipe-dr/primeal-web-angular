@@ -1,0 +1,30 @@
+//
+// ----------------------------------------------------------------------
+// Título: Element
+// Origem: sass/6_state/_is-element.scss
+//
+// Finalidade:
+// Parte micro que define a configuração do 'element' quando estiver
+// 'valid' ou 'invalid'
+// ----------------------------------------------------------------------
+//
+.is-element {
+
+  // Is-element--valid
+  &--valid {
+    .form-check-input,
+    .form-control,
+    .form-select {
+      @extend .is-valid;
+    }
+  }
+
+  // Is-element--invalid
+  &--invalid {
+    .form-check-input,
+    .form-control,
+    .form-select {
+      @extend .is-invalid;
+    }
+  }
+}

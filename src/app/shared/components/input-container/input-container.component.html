@@ -1,0 +1,5 @@
+<ng-content></ng-content>
+<!--
+  Utilizada a classe 'w-100' devido ao 'span' com classe 'invalid-feedback' estar dentro de um 'wrapper = pm-error-message' e assim não ocupando toda a largura disponível em tela
+-->
+<pm-error-message class="w-100" [label]="label" [control]="control" *ngIf="showMessageError"></pm-error-message>
