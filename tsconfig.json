@@ -8,7 +8,7 @@
       "@shared/*": ["src/app/shared/*"],
       "@layout/*": ["src/app/layout/*"],
       "@features/*": ["src/app/features/*"],
-      "@env/*": ["src/environments/environment"],
+      "@environments/*": ["src/environments/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
