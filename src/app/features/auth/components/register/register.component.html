@@ -13,24 +13,17 @@
     </pm-input-container>
   </div>
 
-  <div formGroupName="auth">
-    <div class="row gy-3">
-      <div class="col-12">
-        <pm-input-container label="Senha" [control]="convertToFormControl(form.get('auth.password'))"
-          [ngClass]="addClassFeedback(form.get('auth.password'))">
-          <input class="form-control" id="registerPassword" type="password" placeholder="Senha"
-            formControlName="password">
-        </pm-input-container>
-      </div>
+  <div class="col-12">
+    <pm-input-container label="Senha" [control]="convertToFormControl(form.get('password'))" [ngClass]="addClassFeedback(form.get('password'))">
+      <input class="form-control" id="registerPassword" type="password" placeholder="Senha" formControlName="password">
+    </pm-input-container>
+  </div>
 
-      <div class="col-12">
-        <pm-input-container label="Confirmar Senha" [control]="convertToFormControl(form.get('auth.confirmPassword'))"
-          [ngClass]="addClassFeedback(form.get('auth.confirmPassword'))">
-          <input class="form-control" id="registerConfirmPassword" type="password" placeholder="Confirmar Senha"
-            formControlName="confirmPassword">
-        </pm-input-container>
-      </div>
-    </div>
+  <div class="col-12">
+    <pm-input-container label="Confirmar Senha" [control]="convertToFormControl(form.get('confirmPassword'))" [ngClass]="addClassFeedback(form.get('confirmPassword'))">
+      <input class="form-control" id="registerConfirmPassword" type="password" placeholder="Confirmar Senha"
+        formControlName="confirmPassword">
+    </pm-input-container>
   </div>
 
   <div class="col-12 col-sm-auto">
