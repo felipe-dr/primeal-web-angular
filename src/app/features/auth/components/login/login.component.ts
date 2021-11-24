@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import { BaseFormComponent } from '@shared/components/base-form/base-form.component';
 
-import { AuthService } from '@features/auth/services/auth.service';
+import { AuthService } from '@core/services/auth.service';
 
 import { User } from '@features/auth/models/user.model';
 import { FormValidationsUtil } from '@core/utils/validations/form-validations.util';
