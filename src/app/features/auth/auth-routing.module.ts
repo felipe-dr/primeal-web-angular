@@ -5,6 +5,8 @@ import { AuthLayoutComponent } from '@layout/auth-layout/auth-layout.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
+import { AuthGuard } from '@core/guards/auth.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -12,11 +14,13 @@ const routes: Routes = [
     children: [
       {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'register',
-        component: RegisterComponent
+        component: RegisterComponent,
+        canActivate: [AuthGuard]
       }
     ]
   }
